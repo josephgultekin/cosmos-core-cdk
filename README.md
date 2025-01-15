@@ -2,7 +2,6 @@
 
 This template is the boilerplate code for a Cosmos Core.
 
-
 ## The Big Bang: Bootstrapping the Cosmos
 
 This section describes the steps involved in bootstrapping a Cosmos Core.
@@ -60,7 +59,7 @@ At this point you have reached the minimal requirements to bootstrap your Cosmos
 
 7. Run `npx cdk --app "node_modules/@cosmos-building-blocks/common/lib/cdk-toolkit/bootstrap-app.js" deploy`
 
-This will archive this Core and pass it as an asset to the Cosmos CDK Toolkit s3 bucket in your master account, and trigger the CodeBuild job to bootstrap your Core.
+This will archive this Core and pass it as an asset to the Cosmos CDK Toolkit S3 bucket in your master account, and trigger the CodeBuild job to bootstrap your Core.
 
 8. A CodeCommit repository to house this newly customised Core was created as part of the bootstrapping process above. Update the git repository in this Core to point to the new CodeCommit repository. Replacing the `<your-region>` section with the region you selected in `Step 3`, run the following command:
 
@@ -68,4 +67,4 @@ This will archive this Core and pass it as an asset to the Cosmos CDK Toolkit s3
 
 9. Add the changes made to this template by running `git add .`, commit the changes by running `git commit -m "inital commit"`, and push the changes to CodeCommit by running `git push`
 
-Your Core is bootstrapped. Any further changes may be deployed using the Core's own CDK CodePipeline.
+Your Core is now bootstrapped. Any further changes may be deployed using the Core's own CDK CodePipeline.
