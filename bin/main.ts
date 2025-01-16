@@ -7,8 +7,8 @@ import { CosmosCoreStack, GalaxyCoreStack, SolarSystemCoreStack } from '@cdk-cos
 export const app = new App();
 
 // Aws Env Config
-const mgtEnvConfig = { account: '1111', region: 'ap-southeast-1' };
-const devEnvConfig = { account: '2222', region: 'ap-southeast-1' };
+const mgtEnvConfig = { account: '8888', region: 'ap-southeast-1' };
+const devEnvConfig = { account: '9999', region: 'ap-southeast-1' };
 
 // Create the Cosmos (Core)
 const cosmos = new CosmosCoreStack(app, 'Demo', {
@@ -21,7 +21,7 @@ const mgtGalaxy = new GalaxyCoreStack(cosmos, 'Mgt');
 
 // Create the CiCd Solar System
 const ciCd = new SolarSystemCoreStack(mgtGalaxy, 'CiCd', {
-  cidr: '10.0.0.0/24',
+  cidr: '10.0.20.0/24',
 });
 ciCd.addCiCd();
 
